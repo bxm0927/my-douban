@@ -1,0 +1,17 @@
+<import src="../template/template.wxml"/>
+
+<view class="search">
+  <icon class="search-icon" type="search" size="16" color="#405f80"/>
+  <input class="search-text" placeholder="电影搜索" bindfocus="bindfocus" bindconfirm="bindconfirm" />
+  <icon wx-if="{{ !wrapperShow }}" class="search-cancel" bind:tap="searchCancel" type="cancel"/>
+</view>
+
+<view wx-if="{{ !wrapperShow }}" class="search-box">
+  <block wx:for="{{ searchData.subjects }}" wx:key="*this">
+    <template is="move" data="{{ ...item }}"></template>
+  </block>
+</view>
+
+<view wx-if="{{ wrapperShow }}" class="wrapper">
+  <template is="moveList" data="{{ moviesData }}"></template>
+</view>

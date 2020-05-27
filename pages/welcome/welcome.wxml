@@ -1,0 +1,10 @@
+<view class="wrapper">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="/img/电影.png"></image>
+    <text class="userinfo-nickname font-normal">导演是用镜头写作的作家</text>
+  </view>
+
+  <view class="start" bind:tap="start">
+    <text class="text font-normal">开始体验</text>
+  </view>
+</view>

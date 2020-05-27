@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 350rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header .bg-img {
+  width: 100%;
+  -webkit-filter: blur(10px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header .title {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+.countries {
+  color: #eee;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+}
+.year {
+  color: #eee;
+  font-size: 28rpx;
+}
+.collect_count {
+  color: #f21146;
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+.reviews_count {
+  color: #f21146;
+  font-size: 26rpx;
+  margin-left: 30rpx;
+}
+.header-img {
+  width: 200rpx;
+  height: 280rpx;
+  position: absolute;
+  bottom: -60rpx;
+  right: 40rpx;
+}
+.actor {
+  padding: 30rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.actor view {
+  margin-top: 15rpx;
+}
+.intro {
+  padding: 30rpx;
+}
+.intro .title {
+  font-size: 24rpx;
+}
+.intro .intro_txt {
+  margin-top: 30rpx;
+  text-indent: 2rem;
+  line-height: 50rpx;
+}

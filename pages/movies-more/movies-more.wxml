@@ -1,0 +1,7 @@
+<import src="../template/template.wxml"/>
+
+<scroll-view scroll-y bindscrolltolower="scroll" class="wrapper">
+  <block wx:for="{{ moreData.subjects }}" wx:key="*this">
+    <template is="move" data="{{ ...item }}"></template>
+  </block>
+</scroll-view>

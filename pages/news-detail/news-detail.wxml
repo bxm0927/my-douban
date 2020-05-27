@@ -1,0 +1,24 @@
+<view class="wrapper">
+  <image class="head-img" src="{{ articleDetail.img.articleimage }}"></image>
+
+  <view class="author">
+    <image class="avatar" src="{{ articleDetail.img.avatar }}"></image>
+    <text class="name">{{ articleDetail.author }}</text>
+    <text class="text">发表于</text>
+    <text class="date">{{ articleDetail.time }}</text>
+  </view>
+
+  <text class="title">{{ articleDetail.title }}</text>
+
+  <view class="tool">
+    <view class="img">
+      <image class="{{musicFlag ? 'music' : 'no-music'}}" src="../../img/音乐.png" catch:tap="music"></image>
+      <image class="{{favFlag ? 'fav' : 'no-fav'}}" src="../../img/收藏1.png" catch:tap="toggleFav"></image>
+      <image class="share" src="../../img/分享.png" catch:tap="share"></image>
+    </view>
+
+    <view class="line"></view>
+  </view>
+
+  <text class="content">{{ articleDetail.content }}</text>
+</view>

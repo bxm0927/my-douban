@@ -1,0 +1,16 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+page {
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  font-size: 28rpx;
+  color: #666;
+}

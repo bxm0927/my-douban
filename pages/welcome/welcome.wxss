@@ -1,0 +1,48 @@
+page {
+  background-color: #b3d4db;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 70rpx;
+}
+
+.start {
+  margin-top: 400rpx;
+}
+
+.text {
+  font-size: 40rpx;
+  padding: 30rpx 40rpx;
+  border: 1px solid #405f80;
+  border-radius: 20rpx;
+}

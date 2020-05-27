@@ -1,0 +1,11 @@
+@import '../template/template.wxss';
+
+.wrapper {
+  margin-top: 30rpx;
+  height: 1300rpx;
+}
+.wrapper .move {
+  float: left;
+  padding-bottom: 40rpx;
+  width: 27%;
+}

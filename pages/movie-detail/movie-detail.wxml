@@ -1,0 +1,42 @@
+<view class="wrapper">
+  <view class="header">
+    <image class="bg-img" mode="aspectFill" src="{{ detailData.images.large }}"></image>
+
+    <view>
+      <text class="title">{{ detailData.title }}</text>
+    </view>
+
+    <view>
+      <text class="countries">{{ detailData.countries[0] }} ·</text>
+      <text class="year">{{ detailData.year }}</text>
+    </view>
+
+    <view>
+      <text class="collect_count">{{ detailData.collect_count }} 人喜欢</text>
+      <text class="reviews_count">{{ detailData.reviews_count }} 条评论</text>
+    </view>
+
+    <image class="header-img" src="{{ detailData.images.medium }}"></image>
+  </view>
+
+  <view class="actor">
+    <view>
+      <text class="">评分　　{{ detailData.rating.average }}</text>
+    </view>
+    <view>
+      <text class="">导演　　{{ detailData.directors[0].name }}</text>
+    </view>
+    <view>
+      <text class="">主演　　{{ detailData.casts[0].name }}</text>
+    </view>
+    <view>
+      <text class="">类型　　{{ detailData.genres }}</text>
+    </view>
+  </view>
+
+  <view class="intro">
+    <text class="title">剧情简介</text>
+
+    <view class="intro_txt">{{ detailData.summary }}</view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+@import '../template/template.wxss';
+
+.swiper {
+  width: 100%;
+  height: 350rpx;
+}
+.slide-image {
+  width: 100%;
+  height: 350rpx;
+}

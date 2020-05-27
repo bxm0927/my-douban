@@ -1,0 +1,78 @@
+<!-- 圈子 - 文章列表 -->
+<template name="article">
+  <view class="article">
+    <view class="top">
+      <image class="avatar" src="{{ img.avatar }}"></image>
+
+      <view class="top-text">
+        <text class="time">{{ time }}</text>
+        <text class="title">{{ title }}</text>
+      </view>
+    </view>
+
+    <image class="article-image" src="{{ img.articleimage }}"></image>
+    <text class="article-content font-normal">{{ content }}</text>
+
+    <view class="bottom">
+      <image class="fav" src="/img/收藏.png"></image>
+      <text class="fav-text font-normal">{{ favtext }}</text>
+
+      <image class="com" src="/img/评论.png"></image>
+      <text class="com-text font-normal">{{ comtext }}</text>
+    </view>
+  </view>
+</template>
+
+<!-- 电影 - 电影九宫格 -->
+<!-- <template name="moveGroup">
+  <view class="moveGroup">
+    <template is="move"></template>
+  </view>
+</template> -->
+
+<!-- 电影 - 电影列表 -->
+<template name="moveList">
+  <view class="moveList">
+    <block wx:for="{{ moviesData }}" wx:key="index">
+      <view class="inner">
+        <view class="head">
+          <text class="head-title">{{ item.title }}</text>
+          <image class="more-img" src="../../img/icon/more.png" bind:tap="toMore" data-id="{{ item.title }}"></image>
+        </view>
+
+        <view class="moves">
+          <block wx:for="{{ item.subjects }}" wx:key="index">
+            <template is="move" data="{{ ...item }}"></template>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
+
+<!-- 电影 - 单个电影 -->
+<template name="move">
+  <view class="move" bindtap="toDetail" data-id="{{ id }}">
+    <image class="poster" src="{{ images.medium }}"></image>
+    <text class="name">{{ title }}</text>
+
+    <template is="star" data="{{ rating }}"></template>
+  </view>
+</template>
+
+<!-- 电影 - 评分 -->
+<template name="star">
+  <view class="star">
+    <view class="img">
+      <block wx:for="{{ ~~(rating.stars / 10) }}" wx:key="index">
+        <image src="../../img/icon/星.png"></image>
+      </block>
+
+      <block wx:for="{{ 5 - ~~(rating.stars / 10) }}" wx:key="index">
+        <image src="../../img/icon/星 (2).png"></image>
+      </block>
+    </view>
+
+    <text class="text">{{ rating.average }}</text>
+  </view>
+</template>

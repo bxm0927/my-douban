@@ -1,0 +1,41 @@
+<import src="../template/template.wxml"/>
+
+<view class="wrapper">
+  <swiper class="swiper" indicator-dots autoplay interval="3000" duration="500" bind:tap="wrapperToDetail">
+    <block wx:for="{{ imgUrls }}" wx:key="*this">
+      <swiper-item>
+        <image src="{{ item }}" class="slide-image" data-id="{{ index }}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <block wx:for="{{ articleData }}" wx:key="*this">
+    <!-- <view class="article">
+      <view class="top">
+        <image class="avatar" src="{{ item.img.avatar }}"></image>
+
+        <view class="top-text">
+          <text class="time font-normal">{{ item.time }}</text>
+          <text class="title font-normal">{{ item.title }}</text>
+        </view>
+      </view>
+
+
+      <image class="article-image" src="{{ item.img.articleimage }}"></image>
+      <text class="article-content font-normal">{{ item.content }}</text>
+
+      <view class="bottom">
+        <image class="fav" src="{{ item.img.fav }}"></image>
+        <text class="fav-text font-normal">{{ item.favtext }}</text>
+
+        <image class="com" src="{{ item.img.com }}"></image>
+        <text class="com-text font-normal">{{ item.comtext }}</text>
+      </view>
+    </view> -->
+
+    <!-- 自定义属性，绑定 event.currentTarget.dataset 到每个 template -->
+    <view catch:tap="toDetail" data-id="{{ item.id }}">
+      <template is="article" data="{{ ...item }}"></template>
+    </view>
+  </block>
+</view>

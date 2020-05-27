@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/movies/movies",
+    "pages/movies-more/movies-more",
+    "pages/movie-detail/movie-detail",
+    "pages/news-list/news-list",
+    "pages/news-detail/news-detail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTitleText": "我的豆瓣",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#cdcdcd",
+    "selectedColor": "ff5a60",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "img/iconPath/电影1.png",
+        "selectedIconPath": "img/iconPath/电影.png"
+      },
+      {
+        "pagePath": "pages/news-list/news-list",
+        "text": "圈子",
+        "iconPath": "img/iconPath/阅读1.png",
+        "selectedIconPath": "img/iconPath/阅读.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "img/iconPath/个人1.png",
+        "selectedIconPath": "img/iconPath/个人.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
